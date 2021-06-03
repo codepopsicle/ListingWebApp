@@ -70,34 +70,16 @@ public class ApiController {
 		return reportingService.getTop30MostFrequentlyContactedListings();
 	}
 
-	/*@ApiOperation(value = "API to convert an amount of one currency into another", notes = "", nickname = "convert")
+	@ApiOperation(value = "API to convert an amount of one currency into another", notes = "", nickname = "convert")
 	@ApiResponses(value = {
 			@ApiResponse(code = 500, message = "Server error"),
 			@ApiResponse(code = 404, message = "Service not found"),
 			@ApiResponse(code = 200, message = "Successful retrieval",
-					response = BigDecimal.class) })
-	@RequestMapping(path = "/convert", method = RequestMethod.POST)
-	public BigDecimal convertCurrencyAmount(@RequestBody String inputJSON) throws IllegalArgumentException, JSONException, RatesNotInitializedException{
+					response = Map.class) })
+	@RequestMapping(path = "/monthlyreport", method = RequestMethod.GET)
+	public Map getMonthlyReport() {
 
-		final String baseCurrency = new JSONObject(inputJSON).get("base").toString();
-		final String notionalCurrency = new JSONObject(inputJSON).get("notional").toString();
-		final BigDecimal baseAmount = new BigDecimal(new JSONObject(inputJSON).get("base_amount").toString());
-
-		return exchangeRateService.convertCurrencyAmount(baseCurrency, notionalCurrency, baseAmount);
+		return reportingService.getMonthlyReport();
 	}
-
-	@ApiOperation(value = "API to fetch the graph of a particular currency from the ECB website", notes = "", nickname = "graph")
-	@ApiResponses(value = {
-			@ApiResponse(code = 500, message = "Server error"),
-			@ApiResponse(code = 404, message = "Service not found"),
-			@ApiResponse(code = 200, message = "Successful retrieval",
-					response = URL.class) })
-	@RequestMapping(path = "/graph", method = RequestMethod.POST)
-	public URL getGraphURL(@RequestBody String inputJSON) throws MalformedURLException, JSONException{
-
-		final String currency = new JSONObject(inputJSON).get("currency").toString();
-
-		return exchangeRateService.getGraphURL(currency);
-	}*/
 
 }

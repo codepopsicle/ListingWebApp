@@ -1,5 +1,6 @@
 package com.autoscout.springboot.service;
 
+import com.autoscout.springboot.ServiceUtils;
 import com.autoscout.springboot.model.Contact;
 import com.autoscout.springboot.model.Listing;
 import com.autoscout.springboot.repository.ContactRepository;
@@ -39,7 +40,7 @@ public class ReportingService {
         }
 
         averagePriceMap.forEach((key, value) -> {
-            formattedPriceMap.put(key, formatPrice(value));
+            formattedPriceMap.put(key, ServiceUtils.formatPrice(value));
         });
 
         return formattedPriceMap;
@@ -55,7 +56,7 @@ public class ReportingService {
                 .collect(Collectors.groupingBy(Listing::getMake, Collectors.counting()));
 
         countMap.forEach((key, value) -> {
-            formattedPercentageMap.put(key, formatPercentage((int)(value * 100.0 / listingSize + 0.5)));
+            formattedPercentageMap.put(key, ServiceUtils.formatPercentage((int)(value * 100.0 / listingSize + 0.5)));
         });
 
 
@@ -85,19 +86,40 @@ public class ReportingService {
         final double averagePrice = listingList.stream().
                 collect(Collectors.averagingDouble(Listing::getPrice));
 
-        return formatPrice(averagePrice);
+        return ServiceUtils.formatPrice(averagePrice);
 
     }
 
-    private String formatPrice(Double price){
+    public Map getMonthlyReport(){
 
-        final Locale locale = Locale.GERMANY;
-        final NumberFormat numberFormat = NumberFormat.getCurrencyInstance(locale);
-        return numberFormat.format(price);
-    }
+        /* First generate a Map of Month -> Map<ListingID, Count> */
 
-    private String formatPercentage(int percentage){
-        return percentage + "%";
+        final List<Contact> contactList = contactRepository.findAll();
+        final Map<Integer, Map<Long, Long>> countMap = contactList.stream()
+                .collect(Collectors.groupingBy(Contact::getDay, Collectors.groupingBy(Contact::getListingId, Collectors.counting())));
+
+        /* Sorting and limiting to 5 entries per month */
+        final Map<Integer, Map<Long, Long>> sortedCountMap = new HashMap<>();
+        countMap.forEach((key, value) -> {
+            sortedCountMap.put(key, value.entrySet()
+                    .stream()
+                    .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                    .limit(5)
+                    .collect( toMap(e -> e.getKey(), Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new)));
+        });
+
+        /* Create a new Map<Month, List<Listing>> */
+        final Map<Integer, List<Listing>> reportMap = new LinkedHashMap<>();
+        sortedCountMap.forEach((key, value) -> {
+            List<Listing> listingList = new ArrayList<>();
+            value.forEach((k, v) -> {
+                listingList.add(listingRepository.findByListingId(k).get(0));
+            });
+            reportMap.put(key, listingList);
+        });
+
+        return reportMap;
+
     }
 
 }

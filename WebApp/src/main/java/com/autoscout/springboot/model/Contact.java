@@ -1,6 +1,7 @@
 package com.autoscout.springboot.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Contact {
@@ -38,5 +39,22 @@ public class Contact {
 
     public void setContactDate(String contactDate) {
         this.contactDate = contactDate;
+    }
+
+    private Date convertUtcEpochToDate(String epochTime){
+
+        return new Date(Long.parseLong(epochTime));
+    }
+
+    public int getDay(){
+        return convertUtcEpochToDate(this.contactDate).getDay();
+    }
+
+    public int getMonth() {
+        return convertUtcEpochToDate(this.contactDate).getMonth();
+    }
+
+    public int getYear(){
+        return convertUtcEpochToDate(this.contactDate).getYear();
     }
 }

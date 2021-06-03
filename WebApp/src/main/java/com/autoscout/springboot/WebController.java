@@ -95,6 +95,14 @@ public class WebController {
         return "frequently-contacted";
     }
 
+    @GetMapping("/monthly-report")
+    public String getMonthlyReport(Model model){
+
+        model.addAttribute("monthlyReport", reportingService.getMonthlyReport());
+
+        return "monthly-report";
+    }
+
     private String uploadAndProcessFile(MultipartFile multipartFile, RedirectAttributes redirectAttributes,
                                       HeaderType headerType) throws IOException, IncorrectFormatException {
 

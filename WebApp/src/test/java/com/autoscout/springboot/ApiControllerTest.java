@@ -133,5 +133,20 @@ public class ApiControllerTest {
 
 	}
 
+	/*@Test
+	public void monthlyReportTest() throws Exception {
+
+		final File outputFile = resourceLoader.getResource("classpath:monthly-report.json").getFile();
+		final String outputString = new String(Files.readAllBytes(outputFile.toPath()));
+
+		MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/monthly-report"))
+				.andExpect(status().isOk())
+				.andReturn();
+
+		Assert.assertEquals(response.getResponse().getContentAsString().replaceAll("[^a-zA-Z0-9]", "").trim(),
+				outputString.replaceAll("[^a-zA-Z0-9]", "").trim());
+
+	}*/
+
 
 }

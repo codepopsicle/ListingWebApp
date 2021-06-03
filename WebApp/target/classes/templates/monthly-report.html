@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Top 5 most frequently contact listings by month</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <p th:if="${#strings.isEmpty(monthlyReport)}" class="alert">Can't retrieve report</p>
+    <table>
+        <tr th:each="element : ${monthlyReport}">
+            <td th:text="${element.key}">key</td>
+            <table>
+                <tr th:each="value : ${element.value}">
+                    <td th:text="${value.listingId}">Name1</td>
+                    <td th:text="${value.make}">Name2</td>
+                    <td th:text="${value.price}">Name3</td>
+                    <td th:text="${value.mileage}">Name4</td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

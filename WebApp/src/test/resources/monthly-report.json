@@ -1,0 +1,296 @@
+{
+  "0": [
+    {
+      "id": 296,
+      "listingId": 1295,
+      "make": "Mazda",
+      "price": 12095,
+      "mileage": 3500,
+      "seller_type": "private"
+    },
+    {
+      "id": 171,
+      "listingId": 1170,
+      "make": "Mercedes-Benz",
+      "price": 23955,
+      "mileage": 8500,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 176,
+      "listingId": 1175,
+      "make": "VW",
+      "price": 32871,
+      "mileage": 7000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 67,
+      "listingId": 1066,
+      "make": "VW",
+      "price": 8960,
+      "mileage": 4000,
+      "seller_type": "other"
+    },
+    {
+      "id": 86,
+      "listingId": 1085,
+      "make": "Audi",
+      "price": 46614,
+      "mileage": 8500,
+      "seller_type": "private"
+    }
+  ],
+  "1": [
+    {
+      "id": 182,
+      "listingId": 1181,
+      "make": "Renault",
+      "price": 8933,
+      "mileage": 3500,
+      "seller_type": "other"
+    },
+    {
+      "id": 95,
+      "listingId": 1094,
+      "make": "Audi",
+      "price": 32904,
+      "mileage": 7000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 162,
+      "listingId": 1161,
+      "make": "Toyota",
+      "price": 35621,
+      "mileage": 3000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 36,
+      "listingId": 1035,
+      "make": "Mercedes-Benz",
+      "price": 21943,
+      "mileage": 8500,
+      "seller_type": "private"
+    },
+    {
+      "id": 100,
+      "listingId": 1099,
+      "make": "BWM",
+      "price": 5914,
+      "mileage": 8500,
+      "seller_type": "dealer"
+    }
+  ],
+  "2": [
+    {
+      "id": 32,
+      "listingId": 1031,
+      "make": "Mercedes-Benz",
+      "price": 27501,
+      "mileage": 5000,
+      "seller_type": "private"
+    },
+    {
+      "id": 180,
+      "listingId": 1179,
+      "make": "VW",
+      "price": 24072,
+      "mileage": 7500,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 200,
+      "listingId": 1199,
+      "make": "Audi",
+      "price": 26739,
+      "mileage": 9000,
+      "seller_type": "other"
+    },
+    {
+      "id": 76,
+      "listingId": 1075,
+      "make": "Audi",
+      "price": 36845,
+      "mileage": 7000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 77,
+      "listingId": 1076,
+      "make": "Renault",
+      "price": 8989,
+      "mileage": 9500,
+      "seller_type": "private"
+    }
+  ],
+  "3": [
+    {
+      "id": 11,
+      "listingId": 1010,
+      "make": "Fiat",
+      "price": 41201,
+      "mileage": 1500,
+      "seller_type": "other"
+    },
+    {
+      "id": 288,
+      "listingId": 1287,
+      "make": "Mercedes-Benz",
+      "price": 46499,
+      "mileage": 3000,
+      "seller_type": "other"
+    },
+    {
+      "id": 62,
+      "listingId": 1061,
+      "make": "Renault",
+      "price": 5641,
+      "mileage": 7000,
+      "seller_type": "other"
+    },
+    {
+      "id": 198,
+      "listingId": 1197,
+      "make": "Mazda",
+      "price": 40281,
+      "mileage": 4500,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 210,
+      "listingId": 1209,
+      "make": "Renault",
+      "price": 3109,
+      "mileage": 9500,
+      "seller_type": "private"
+    }
+  ],
+  "4": [
+    {
+      "id": 114,
+      "listingId": 1113,
+      "make": "BWM",
+      "price": 39436,
+      "mileage": 2000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 267,
+      "listingId": 1266,
+      "make": "Renault",
+      "price": 33493,
+      "mileage": 6000,
+      "seller_type": "private"
+    },
+    {
+      "id": 283,
+      "listingId": 1282,
+      "make": "VW",
+      "price": 3682,
+      "mileage": 8500,
+      "seller_type": "private"
+    },
+    {
+      "id": 287,
+      "listingId": 1286,
+      "make": "BWM",
+      "price": 23002,
+      "mileage": 2000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 166,
+      "listingId": 1165,
+      "make": "Fiat",
+      "price": 42864,
+      "mileage": 5000,
+      "seller_type": "dealer"
+    }
+  ],
+  "5": [
+    {
+      "id": 102,
+      "listingId": 1101,
+      "make": "Renault",
+      "price": 7771,
+      "mileage": 1500,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 16,
+      "listingId": 1015,
+      "make": "Mercedes-Benz",
+      "price": 34927,
+      "mileage": 5000,
+      "seller_type": "dealer"
+    },
+    {
+      "id": 298,
+      "listingId": 1297,
+      "make": "Toyota",
+      "price": 7478,
+      "mileage": 5500,
+      "seller_type": "private"
+    },
+    {
+      "id": 221,
+      "listingId": 1220,
+      "make": "Fiat",
+      "price": 16315,
+      "mileage": 3000,
+      "seller_type": "other"
+    },
+    {
+      "id": 241,
+      "listingId": 1240,
+      "make": "BWM",
+      "price": 21131,
+      "mileage": 3000,
+      "seller_type": "dealer"
+    }
+  ],
+  "6": [
+    {
+      "id": 288,
+      "listingId": 1287,
+      "make": "Mercedes-Benz",
+      "price": 46499,
+      "mileage": 3000,
+      "seller_type": "other"
+    },
+    {
+      "id": 289,
+      "listingId": 1288,
+      "make": "VW",
+      "price": 48205,
+      "mileage": 4500,
+      "seller_type": "other"
+    },
+    {
+      "id": 291,
+      "listingId": 1290,
+      "make": "Audi",
+      "price": 43005,
+      "mileage": 7000,
+      "seller_type": "other"
+    },
+    {
+      "id": 294,
+      "listingId": 1293,
+      "make": "Renault",
+      "price": 7656,
+      "mileage": 4000,
+      "seller_type": "private"
+    },
+    {
+      "id": 300,
+      "listingId": 1299,
+      "make": "Fiat",
+      "price": 19832,
+      "mileage": 8000,
+      "seller_type": "private"
+    }
+  ]
+}
