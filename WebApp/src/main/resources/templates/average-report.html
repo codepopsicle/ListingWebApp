@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Average Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<p th:if="${#maps.isEmpty(averageReport)}" class="alert">Can't retrieve report</p>
+<table>
+    <tr th:each="element : ${averageReport}">
+        <table>
+            <td th:text="${element.key}">key</td>
+            <td th:text="${element.value}">value</td>
+        </table>
+    </tr>
+</table>
+</body>
+</html>

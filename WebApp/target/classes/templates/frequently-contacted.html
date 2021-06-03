@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Top 30 most frequently contacted listings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <p th:if="${#strings.isEmpty(averagePrice)}" class="alert">Can't retrieve pricing</p>
+    <p th:text="${averagePrice}" th:if="${averagePrice ne null}"></p>
+</div>
+</body>
+</html>

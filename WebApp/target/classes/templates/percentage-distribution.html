@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Percentage Distribution</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<p th:if="${#maps.isEmpty(percentageDistribution)}" class="alert">Can't retrieve distribution</p>
+<table>
+    <tr th:each="element : ${percentageDistribution}">
+        <table>
+            <td th:text="${element.key}">key</td>
+            <td th:text="${element.value}">value</td>
+        </table>
+    </tr>
+</table>
+</body>
+</html>

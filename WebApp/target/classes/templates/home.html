@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>AutoScout24 Reporting Service</title></head>
+<style>
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+<h1>Welcome to the <span th:text="${appName}">App</span></h1>
+<a th:href="@{average-report}" class="button">View Average Listing Price Report</a>
+<a th:href="@{percentage-distribution}" class="button">View Percentage Distribution Report</a>
+<a th:href="@{frequently-contacted}" class="button">View Most Contacted Listing Report</a>
+<a th:href="@{average-report}" class="button">View Monthly Report</a>
+<a th:href="@{listing-upload}" class="button">Upload Listing</a>
+<a th:href="@{contact-upload}" class="button">Upload Contacts</a>
+</body>
+</html>
