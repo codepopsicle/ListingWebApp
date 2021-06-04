@@ -33,7 +33,7 @@ public class ApiController {
 		return "Welcome to the AutoScout24 Listing Service !";
 	}
 
-	@ApiOperation(value = "API to retrieve exchange rate for currency pair with EUR as reference", notes = "", nickname = "reference")
+	@ApiOperation(value = "API to retrieve average listing price per seller type", notes = "", nickname = "average")
 	@ApiResponses(value = {
 			@ApiResponse(code = 500, message = "Server error"),
 			@ApiResponse(code = 404, message = "Service not found"),
@@ -46,7 +46,7 @@ public class ApiController {
 	}
 
 
-	@ApiOperation(value = "API to retrieve exchange rate for currency pair with base currency as reference", notes = "", nickname = "exchange")
+	@ApiOperation(value = "API to retrieve percentage distribution of listings", notes = "", nickname = "distribution")
 	@ApiResponses(value = {
 			@ApiResponse(code = 500, message = "Server error"),
 			@ApiResponse(code = 404, message = "Service not found"),
@@ -58,7 +58,7 @@ public class ApiController {
 		return reportingService.getPercentageDistribution();
 	}
 
-	@ApiOperation(value = "API to retrieve a map of all available currencies and how many times they were accessed", notes = "", nickname = "currencies")
+	@ApiOperation(value = "API to retrieve top 30 most frequently contacted listings", notes = "", nickname = "top30")
 	@ApiResponses(value = {
 			@ApiResponse(code = 500, message = "Server error"),
 			@ApiResponse(code = 404, message = "Service not found"),
@@ -70,13 +70,13 @@ public class ApiController {
 		return reportingService.getTop30MostFrequentlyContactedListings();
 	}
 
-	@ApiOperation(value = "API to convert an amount of one currency into another", notes = "", nickname = "convert")
+	@ApiOperation(value = "API to retrieve monthly report", notes = "", nickname = "top5monthly")
 	@ApiResponses(value = {
 			@ApiResponse(code = 500, message = "Server error"),
 			@ApiResponse(code = 404, message = "Service not found"),
 			@ApiResponse(code = 200, message = "Successful retrieval",
 					response = Map.class) })
-	@RequestMapping(path = "/monthlyreport", method = RequestMethod.GET)
+	@RequestMapping(path = "/top5monthly", method = RequestMethod.GET)
 	public Map getMonthlyReport() {
 
 		return reportingService.getMonthlyReport();

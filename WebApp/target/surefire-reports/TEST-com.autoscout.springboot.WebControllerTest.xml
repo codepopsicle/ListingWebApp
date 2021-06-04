@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.autoscout.springboot.ApiControllerTest" time="10.267" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.autoscout.springboot.WebControllerTest" time="18.581" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -53,8 +53,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="monthlyReportTest" classname="com.autoscout.springboot.ApiControllerTest" time="2.744"/>
-  <testcase name="percentageDistributionTest" classname="com.autoscout.springboot.ApiControllerTest" time="2.828"/>
-  <testcase name="top30ContactTest" classname="com.autoscout.springboot.ApiControllerTest" time="2.64"/>
-  <testcase name="averagePriceTest" classname="com.autoscout.springboot.ApiControllerTest" time="2.013"/>
+  <testcase name="uploadContactFileTest" classname="com.autoscout.springboot.WebControllerTest" time="4.41"/>
+  <testcase name="uploadListingFileTest" classname="com.autoscout.springboot.WebControllerTest" time="3.147"/>
 </testsuite>

@@ -1,2 +1,4 @@
+com/autoscout/springboot/BaseController.class
 com/autoscout/springboot/ApiControllerIT.class
+com/autoscout/springboot/WebControllerTest.class
 com/autoscout/springboot/ApiControllerTest.class
